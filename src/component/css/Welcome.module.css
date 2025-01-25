@@ -1,0 +1,39 @@
+
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hh{
+    
+}
+
+.image{
+    width: 300px;
+    width: 300px;
+    margin: 15px;
+}
+
+.main:hover .image{
+    filter: brightness(1.2);
+}
+
+.btn{
+    border-radius: 5px;
+    background-color: white;
+    margin: 10px;
+    color: black;
+    width: 200px;
+    border: 1px solid gold;
+}
+
+.btn:hover{
+    background-color: black;
+    border-radius: 5px;
+    border-color: black;
+    color: white;
+}
+
