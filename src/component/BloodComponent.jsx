@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useAuth } from "./LoginContext";
 import classes from "./css/Home.module.css";
+import { useNavigate } from "react-router-dom";
 
 function BloodComponet({value}){
 
@@ -10,6 +11,7 @@ function BloodComponet({value}){
     const {user} = useAuth();
     const [selectedRow, setSelectedRow] = useState(null);
     const [success, setSuccess] = useState(false);
+    const navigate = useNavigate();
 
     const handleRowClick = (index) => {
         setSelectedRow(index); // Update the selected row index
@@ -26,6 +28,7 @@ function BloodComponet({value}){
             });
             if (response.ok) {
                 setSuccess("You have succesfully got the blood!");
+                navigate('/home');
             } else {
                 const errorData = await response.text();
                 setError(errorData.message || 'Error on the BE side'); // Display error message
