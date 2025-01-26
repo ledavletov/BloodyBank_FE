@@ -64,10 +64,10 @@ function RegistrationComponent(){
             });
 
             if (response.ok) {
-                navigate('/login'); // Redirect to home on success
+                navigate('/login'); // Redirect to login on success
             } else {
-                const errorData = await response.json();
-                setError(errorData.message || 'Registration failed.'); // Display error message
+                const errorData = await response.text();
+                setError(errorData.message || 'Email record already exists'); // Display error message
             }
         } catch (error) {
             setError('Network error. Please try again later.'); // Handle network errors

@@ -1,0 +1,88 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.image{
+    width: 300px;
+    width: 300px;
+    margin: 15px;
+}
+
+.main:hover .image{
+    filter: brightness(1.2);
+}
+
+.btnDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.btn{
+    margin-right: 10px;
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40%;
+    color: black;
+}
+
+.user{
+    color: black;
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    color: black;
+}
+
+tr:hover {background-color: aquamarine;}
+
+button:hover{
+    background-color: aquamarine;
+    color: black;
+}
+
+.text-btn{
+    
+}
+
+.selected{
+    background-color: rgb(150, 150, 195);
+}
+
+.selBtn{
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.btnAll{
+    border-radius: 5px;
+    background-color: black;
+    margin: 10px;
+    color: white;
+    width: 206px;
+    border: 1px solid gold;
+}
+
+.btnAll:hover {
+    cursor: pointer;
+    color: gold;
+    text-decoration: underline;
+}
+
