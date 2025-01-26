@@ -17,6 +17,10 @@ function BloodComponet({value}){
         setSelectedRow(index); // Update the selected row index
     };
 
+    function backHome(){
+        navigate('/home')
+    }
+
     async function handleBloodClick(){
         const url =  `http://localhost:8080/home/extract/${selectedRow}/${user?.id}`;
         try{
@@ -102,8 +106,11 @@ function BloodComponet({value}){
             </table>
             {success && <p style={{ color: 'green' }}>{success}</p>}
             {error && <p style={{ color: 'red' }}>{error}</p>}
-            <div className={classes.selBtn}>
+            {!value && <div className={classes.selBtn}>
                 <button onClick={handleBloodClick} disabled={!selectedRow}>Select</button>
+            </div>}
+            <div className={classes.selBtn}>
+                <button onClick={backHome}>Back</button>
             </div>
         </div>
     );
